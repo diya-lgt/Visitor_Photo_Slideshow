@@ -1,4 +1,4 @@
-```markdown
+
 # Visitor Photo Slideshow
 
 A web application where visitors enter their name, confirm public display consent, and upload photos to play in a slideshow. Returning visitors also have their previous photos included in the slideshow.
