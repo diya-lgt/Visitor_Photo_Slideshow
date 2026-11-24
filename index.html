@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visitor Photo Slideshow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Side: Visitor Upload Form -->
+    <div class="upload-box">
+      <h2>Visitor Check-In</h2>
+      <form id="uploadForm">
+        <label for="visitorName">Your Name</label>
+        <input type="text" id="visitorName" placeholder="Enter your full name" required />
+
+        <label for="photoInput">Select Photos (JPG, PNG, WEBP - Max 5MB)</label>
+        <input type="file" id="photoInput" accept="image/jpeg, image/png, image/webp" multiple required />
+
+        <div class="consent-row">
+          <input type="checkbox" id="consentCheck" required />
+          <label for="consentCheck">I agree to display my photos on the public screen.</label>
+        </div>
+
+        <button type="submit">Upload & Start Slideshow</button>
+        <p id="statusMsg"></p>
+      </form>
+    </div>
+
+    <!-- Right Side: TV / Monitor Slideshow Display -->
+    <div class="slideshow-box">
+      <div id="slideshowScreen">
+        <p class="placeholder-text">Waiting for visitor photos...</p>
+      </div>
+      <div class="slide-info">
+        <h3 id="displayVisitorName">Welcome!</h3>
+        <span id="slideCounter"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
