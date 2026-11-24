@@ -1,18 +1,24 @@
-
 # Visitor Photo Slideshow
 
-A web application where visitors enter their name, confirm public display consent, and upload photos to play in a slideshow. Returning visitors also have their previous photos included in the slideshow.
+A web application built for event or reception displays to collect visitor photos with explicit public display consent, recognize returning visitors, and run an automated public slideshow.
 
 ## Features
-- Visitor name input, multi-photo selection, and required public-display consent checkbox
-- File type (`JPG`, `PNG`, `WEBP`) and size (`<= 5MB`) validation
-- Automatic 3-second slideshow playback with slide counter and visitor greeting
-- Returning visitor detection by name to include past photos alongside new uploads
+
+- **Visitor Check-In & Photo Upload:** Visitors enter their name, select a valid image (`JPG`, `PNG`, `WEBP` up to `5MB`), and check the consent box to upload.
+- **Public Display Consent:** Enforces explicit checkbox agreement before any photo is accepted or shown on the public screen.
+- **Returning Visitor Recognition:** Matches visitors by normalized name (trimmed, lowercase) so repeat visitors automatically see their past photos combined with new uploads.
+- **Automated Public Slideshow:** Displays uploaded visitor photos in a continuous loop with a `3-second` (`3000ms`) interval.
+- **Upload Guard & Validation:** Prevents overlapping submissions (`isUploading` lock) and blocks invalid file formats or oversized files.
 
 ## Tech Stack
-- HTML5, CSS3, Vanilla JavaScript
-- Browser `localStorage` for prototype persistence
 
-## Setup & Run
-1. Open the project folder in **VS Code**.
-2. Open `index.html` using **Live Server** or directly in **Google Chrome**.
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Persistence:** Browser `localStorage`
+- **Version Control:** Git & GitHub
+
+## Setup & Run Instructions
+
+1. **Clone or download the repository:**
+   
+   git clone [https://github.com/diya-lgt/Visitor_Photo_Slideshow.git](https://github.com/diya-lgt/Visitor_Photo_Slideshow.git)
+   cd Visitor_Photo_Slideshow
