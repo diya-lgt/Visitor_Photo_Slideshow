@@ -1,0 +1,7 @@
+# Assumptions
+
+1. **Returning Visitor Identification:** The assignment does not specify how returning visitors are recognized. I assumed visitors are identified by matching their normalized (trimmed, lowercase) name so repeat visitors automatically see their previous photos alongside new ones.
+2. **Privacy & Public Display Consent:** Because uploaded photos are shown on a public screen or TV display, I assumed explicit user consent via a checkbox should be required before upload to respect privacy.
+3. **File Formats & Size Limit:** Since exact limits were not stated in the prompt, I assumed only `JPG`, `PNG`, and `WEBP` images up to `5MB` each are allowed so uploads stay fast and browser storage does not fill up too quickly.
+4. **Slideshow Duration & Order:** I assumed each photo stays on screen for `3` seconds (`3000ms`) and that a returning visitor's older photos and newly uploaded photos play together in a continuous loop.
+5. **Storage & Concurrent Uploads:** For this prototype, I assumed data can be stored in browser `localStorage` and used an upload lock (`isUploading`) to prevent overlapping submissions during file reading, noting that `localStorage` has browser-level size and device limits.
